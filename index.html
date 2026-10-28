@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Practica 11 </title>
+    </head>
+    <body>
+        <script>
+        let bono = 1200;
+        let sq = 15000;
+        let nombre = prompt("Ingrese nombre");
+        let dt = Number(prompt("Ingrese dias trabajados"));
+        let antiguedad = Number(prompt("Ingrese antiguedad"));
+
+        let sueldo = (sq / 15) * dt;
+        let bonoGanado = 0;
+
+        if (antiguedad >= 10) {
+            bonoGanado = bono;
+        }
+
+        let total = sueldo + bonoGanado;
+
+        document.write("<h2 style='text-align:center'>Resultado del empleado</h2>");
+        document.write("<table border='1' cellpadding='8' style='border-collapse:collapse; text-align:center; margin:auto; width:700px'>");
+        document.write("<tr>");
+        document.write("<th>#</th>");
+        document.write("<th>Nombre</th>");
+        document.write("<th>Dias trabajados</th>");
+        document.write("<th>Antiguedad</th>");
+        document.write("<th>Sueldo</th>");
+        document.write("<th>Bono</th>");
+        document.write("<th>Total</th>");
+        document.write("</tr>");
+
+        for (let a = 1; a <= 4; a++) {
+            document.write("<tr>");
+            document.write("<td>" + a + "</td>");
+
+            if (a == 1) {
+                document.write("<td>" + nombre + "</td>");
+                document.write("<td>" + dt + "</td>");
+                document.write("<td>" + antiguedad + " años</td>");
+                document.write("<td>$" + sueldo + "</td>");
+                document.write("<td>$" + bonoGanado + "</td>");
+                document.write("<td>$" + total + "</td>");
+            } else {
+                document.write("<td></td>");
+                document.write("<td></td>");
+                document.write("<td></td>");
+                document.write("<td></td>");
+                document.write("<td></td>");
+                document.write("<td></td>");
+            }
+
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+        </script>
+    </body>
+</html>
